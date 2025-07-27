@@ -1,11 +1,9 @@
-import axios from 'axios';
 var data = JSON.stringify({
     "mode": "FULL",
     "exchangeTokens": {
         "NSE": ["3045"]
     }
 });
-
 var config = {
   method: 'post',
   url: 'https://apiconnect.angelone.in/rest/secure/angelbroking/market/v1/quote/',
