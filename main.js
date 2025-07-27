@@ -1,21 +1,18 @@
 var data = JSON.stringify({
-    "mode": "FULL",
-    "exchangeTokens": {
-        "NSE": ["3045"]
-    }
-});
+     "mode": "LTP", "exchangeTokens": { "NSE": ["3045","881"], "NFO": ["58662"] }}
+);
 var config = {
   method: 'post',
   url: 'https://apiconnect.angelone.in/rest/secure/angelbroking/market/v1/quote/',
   headers: { 
-    'X-PrivateKey': 'API_KEY', 
+    'X-PrivateKey': 'VY6lImzK', 
     'Accept': 'application/json, application/json', 
     'X-SourceID': 'WEB, WEB', 
-    'X-ClientLocalIP': 'CLIENT_LOCAL_IP', 
-    'X-ClientPublicIP': 'CLIENT_PUBLIC_IP', 
-    'X-MACAddress': 'MAC_ADDRESS', 
+    'X-ClientLocalIP': '127.0.0.1', 
+    'X-ClientPublicIP': '203.110.242.30', 
+    'X-MACAddress': '7c:b5:66:fa:08:d9', 
     'X-UserType': 'USER', 
-    'Authorization': 'Bearer AUTHORIZATION_TOKEN', 
+    'Authorization': 'c9c657c0-467b-4d3c-8e6e-359c6602abd3', 
     'Content-Type': 'application/json'
   },
   data : data
