@@ -1,4 +1,3 @@
-console.log("HOla!");
 import axios from 'axios';
 var data = JSON.stringify({
     "mode": "FULL",
@@ -23,6 +22,8 @@ var config = {
   },
   data : data
 };
+
+console.log('HOla!');
 
 axios(config)
 .then(function (response) {
