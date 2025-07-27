@@ -1,0 +1,23 @@
+{
+  "name": "stock-analyzer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamrudhNelli/stock-analyzer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamrudhNelli/stock-analyzer/issues"
+  },
+  "homepage": "https://github.com/SamrudhNelli/stock-analyzer#readme",
+  "dependencies": {
+    "axios": "^1.11.0"
+  }
+
+}

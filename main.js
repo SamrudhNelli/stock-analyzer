@@ -1,5 +1,5 @@
 console.log("HOla!");
-var axios = require('axios');
+import axios from 'axios';
 var data = JSON.stringify({
     "mode": "FULL",
     "exchangeTokens": {
