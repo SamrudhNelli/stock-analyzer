@@ -2,6 +2,11 @@ const secret = '5JENCOQR3472DBTJCGJA4LK7RE'
 const token = window.otplib.authenticator.generate(secret);
 const isValid = window.otplib.authenticator.check(token, secret);
 const isValid2 = window.otplib.authenticator.verify({ token, secret });
+const grid_info = document.querySelector('.info');
+if(grid_info === null)
+{
+  console.log("NULL CLASS");
+}
 var data = JSON.stringify({
     "clientcode":"S55125542",
     "password":"8289",
@@ -37,7 +42,7 @@ axios(config)
   setInterval(function() 
   {
       var data = JSON.stringify({
-        "mode": "FULL", "exchangeTokens": {
+        "mode": "LTP", "exchangeTokens": {
             "NSE": ["3045"] }});
       var config = {
       method: 'post',
@@ -59,7 +64,10 @@ axios(config)
 
       axios(config)
       .then(function (response) {
-        console.log(JSON.stringify(response.data));
+        const json = JSON.stringify(response.data);
+        const obj = JSON.parse(json);
+        grid_info.innerHTML = "";
+        grid_info.innerHTML = obj.data.fetched[0].ltp;
       })
       .catch(function (error) {
         console.log(error);

@@ -1,0 +1,35 @@
+body 
+{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid 
+{
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(2, 150px);
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+
+    padding: 10px;
+}
+
+.grid > div 
+{
+    border: 4px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.name
+{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
