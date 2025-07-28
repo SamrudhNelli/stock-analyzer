@@ -1,11 +1,14 @@
+const secret = '5JENCOQR3472DBTJCGJA4LK7RE'
+const token = window.otplib.authenticator.generate(secret);
+const isValid = window.otplib.authenticator.check(token, secret);
+const isValid2 = window.otplib.authenticator.verify({ token, secret });
 var data = JSON.stringify({
     "clientcode":"S55125542",
     "password":"8289",
-	  "totp":"461715",
+    "totp": `${token}`,
     "source":"WEB",
     "state":"STATE_VARIABLE"
 });
-console.log("Meow!");
 
 var config = {
   method: 'post',
@@ -53,7 +56,6 @@ axios(config)
       data : data
       };
 
-      console.log('HOla!');
 
       axios(config)
       .then(function (response) {
@@ -69,5 +71,3 @@ axios(config)
 .catch(function (error) {
   console.log(error);
 });
-
-
